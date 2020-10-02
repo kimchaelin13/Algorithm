@@ -71,6 +71,8 @@ for i in range(101):
 print(ans)
 ```
 
+
+
 색칠하기랑 똑같은데!!!!!!!!!! 이건 좌표기준이 아니라 꼭짓점임 생각해보면 (1,2) (4,4) 사이 좌표에 1을 찍어야함. 6개
 
 ![image-20200922230405995](IM대비.assets/image-20200922230405995.png)
@@ -139,6 +141,10 @@ print(res)
 print(*res_list)
 ```
 
+
+
+
+
 내가 푼 것 70퍼센트 ㅎ 수열을 이해해야 한다. 규칙성! 
 
 
@@ -185,6 +191,65 @@ if __name__=='__main__':
 ```
 
 
+
+## 5-1. IM 대비
+
+```PYTHON
+import sys
+sys.stdin = open('input.txt','r')
+
+N,P=map(int,input().split())
+ans=list(map(int,input().split()))
+res=[]
+
+for _ in range(N):
+    tes=list(map(int,input().split()))
+
+    tmp=0
+    score=0
+    for i in range(P):
+        if ans[i]==tes[i]:
+            tmp+=1
+        else:
+            tmp=0
+
+        score+=tmp
+    res.append(score)
+
+print(max(res)-min(res))
+```
+
+수열이랑 진짜 똑같음! 이거 나오면 행복해서 울듯 ^^<
+
+
+
+다른 문제 풀기 싫어서 함수로 또 풀기!^^,,,,ㅋ,,,ㅠㅠ
+
+```python
+import sys
+sys.stdin = open('input.txt','r')
+
+def grading(tes):
+    tmp=0
+    score=0
+
+    for i in range(P):
+        if ans[i]==tes[i]:
+            tmp+=1
+        else:
+            tmp=0
+        score+=tmp
+    res.append(score)
+
+if __name__=='__main__':
+    N, P = map(int, input().split())
+    ans = list(map(int, input().split()))
+    res = []
+    for i in range(N):
+        tes=list(map(int,input().split()))
+        grading(tes)
+    print(max(res)-min(res))
+```
 
 
 
@@ -273,7 +338,6 @@ if K > R * C:
     print(0)
 else:
     arr = [[0] * C for _ in range(R)]
-    print(arr)
 
     d = 0  # 방향 0 : 우 , 1 : 하, 2 : 좌 , 3 : 상
     r = 0
@@ -401,3 +465,83 @@ print(res)
 ```
 
 시간 초과 뜸 개빡침 
+
+
+
+
+
+
+
+## 10. 경비원
+
+```python
+def dist_calc(idx, pos):
+    if idx == 1:  # 북
+        return pos
+    elif idx == 2:  # 남
+        return C + R + C - pos
+    elif idx == 3:  # 서
+        return C + R + C + R - pos
+    else:  # 동
+        return C + pos
+
+
+C, R = map(int, input().split())
+circumference= (C+R)*2
+
+N = int(input())
+
+dist = []
+for i in range(N+1):
+    idx, pos = map(int,input().split())
+    dist.append(dist_calc(idx,pos))
+
+my_dist = dist[-1]
+
+ans = 0
+
+for i in range(N):
+    clockwise = abs(my_dist-dist[i])
+    ans += min(clockwise,circumference-clockwise)
+print(ans)
+```
+
+
+
+
+
+## 11 . 색종이2
+
+```p
+N = int(input())
+
+paper = [[0] * 101 for _ in range(101)]
+
+num = 1
+
+for _ in range(N):
+    x, y, w, h = map(int, input().split())
+    for i in range(x, x+w):
+        for j in range(y, y+h):
+            paper[i][j] = num
+
+    num += 1
+
+for i in range(1, N + 1):
+    cnt = 0
+    for r in range(101):
+        cnt += paper[r].count(i)
+    print(cnt)
+
+```
+
+
+
+
+
+## Brute Force
+
+```python
+str1=
+```
+

@@ -13,12 +13,13 @@ res=0
 for n in range(len(nums)):
     for i in range(5):
         for j in range(5):
-                if nums[n] in board[i][j]:
+
+                if board[i][j]
                     board[i][j]=0
 
-                    if board[i][:]==0:
+                    if sum(board[i][:])==0:
                         cnt+=1
-                    elif board[j][:]==0:
+                    elif sum(board[j][:])==0:
                         cnt+=1
 
                 if cnt==3:

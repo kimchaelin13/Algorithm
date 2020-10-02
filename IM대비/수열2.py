@@ -1,8 +1,8 @@
 import sys
 sys.stdin=open('input.txt','r')
 
-N,K=map(int,input().split())
-nums=list(map(int,input().split()))
+N,K=map(int,sys.stdin.readline().split())
+nums=list(map(int,sys.stdin.readline().split()))
 
 res=0
 for i in range(0,N):

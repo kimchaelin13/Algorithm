@@ -14,9 +14,14 @@ cnt=0
 
 for i in range(1,n+1):
     for j in range(1,n+1):
-        #all은 그 안에 조건이 모두가 참일때 참
-        if all(a[i][j]>a[i+dx[k]][j+dy[k]] for k in range(4)):
+        if all(a[i][j]>a[i+dx[k][j+dy[k]] for k in range(4)):
             cnt+=1
 print(cnt)
+# for i in range(1,n+1):
+#     for j in range(1,n+1):
+#         #all은 그 안에 조건이 모두가 참일때 참
+#         if all(a[i][j]>a[i+dx[k]][j+dy[k]] for k in range(4)):
+#             cnt+=1
+# print(cnt)
 
 
