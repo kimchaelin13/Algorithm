@@ -1,24 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9b41ae01-3bee-4881-acba-bdf26e81f7df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/IM대비/practice.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IM대비/개미.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IM대비/경비원.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IM대비/방 배정.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IM대비/수열.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IM대비/수열2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IM대비/스위치 켜고 끄기.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IM대비/자리배정.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IM대비/직사각형.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IM대비/IM대비.md" beforeDir="false" afterPath="$PROJECT_DIR$/IM대비/IM대비.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IM대비/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IM대비/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IM대비/빙고.py" beforeDir="false" afterPath="$PROJECT_DIR$/IM대비/빙고.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IM대비_2/boj_색종이.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IM대비_2/boj_수열.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IM대비_2/boj_일곱난쟁이.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IM대비_2/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROBLEM/4. 이분탐색(결정알고리즘), 그리디/4. 랜선 자르기.py" beforeDir="false" afterPath="$PROJECT_DIR$/PROBLEM/4. 이분탐색(결정알고리즘), 그리디/4. 랜선 자르기.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROBLEM/4. 이분탐색(결정알고리즘), 그리디/4. 이분 검색.py" beforeDir="false" afterPath="$PROJECT_DIR$/PROBLEM/4. 이분탐색(결정알고리즘), 그리디/4. 이분 검색.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROBLEM/4. 이분탐색(결정알고리즘), 그리디/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PROBLEM/4. 이분탐색(결정알고리즘), 그리디/input.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,7 +52,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.boj_수열">
     <configuration name="3.격차판 최대합" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Algorithm_additon" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -53,8 +74,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="boj_수열" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Algorithm_additon" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IM대비_2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IM대비_2/boj_수열.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.boj_수열" />
         <item itemvalue="Python.3.격차판 최대합" />
       </list>
     </recent_temporary>
@@ -70,22 +113,33 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state width="726" height="189" key="GridCell.Tab.0.bottom" timestamp="1600929662681">
+    <state width="744" height="189" key="GridCell.Tab.0.bottom" timestamp="1602604567948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="726" height="189" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600929662681" />
-    <state width="726" height="189" key="GridCell.Tab.0.center" timestamp="1600929662681">
+    <state width="744" height="189" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602604567948" />
+    <state width="744" height="189" key="GridCell.Tab.0.center" timestamp="1602604567948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="726" height="189" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600929662681" />
-    <state width="726" height="189" key="GridCell.Tab.0.left" timestamp="1600929662680">
+    <state width="744" height="189" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602604567948" />
+    <state width="744" height="189" key="GridCell.Tab.0.left" timestamp="1602604567948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="726" height="189" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600929662680" />
-    <state width="726" height="189" key="GridCell.Tab.0.right" timestamp="1600929662681">
+    <state width="744" height="189" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602604567948" />
+    <state width="744" height="189" key="GridCell.Tab.0.right" timestamp="1602604567948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="726" height="189" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600929662681" />
+    <state width="744" height="189" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602604567948" />
   </component>
 </project>

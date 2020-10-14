@@ -14,9 +14,9 @@ if __name__=='__main__':
     res=0
     largest=0 #가장 긴 랜선을 찾아야지
     for i in range(k):
-        tmp=int(input())
+        tmp=int(input())로
         line.append(tmp)
-        largest=max(largest,tmp) #기존의 값과 새로운 값을 비교해서 가장 큰 값을 구한다
+        largest=max(largest,tmp) #기존의 값과 새운 값을 비교해서 가장 큰 값을 구한다
     lt=1
     rt=largest
     #이분검색
@@ -30,4 +30,19 @@ if __name__=='__main__':
             #더 큰쪽을 버려야 하니까
             rt=mid-1
     print(res)
+
+
+def Count(len):
+    cnt=0
+    for x in line:
+        cnt+=(x//len)
+    return cnt
+    
+
+
+
+
+
+
+
 
