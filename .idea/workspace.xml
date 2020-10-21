@@ -20,12 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b41ae01-3bee-4881-acba-bdf26e81f7df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/IM대비_2/boj_빙고.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IM대비_2/boj_수 이어가기.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IM대비_2/boj_줄세우기.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IM대비_2/boj_직사각형 네개의 합집합의 면적 구하기.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IM대비_2/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IM대비_2/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IM대비/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IM대비/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IM대비/practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/IM대비/practice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IM대비/자리배정.py" beforeDir="false" afterPath="$PROJECT_DIR$/IM대비/자리배정.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IM대비_2/boj_빙고.py" beforeDir="false" afterPath="$PROJECT_DIR$/IM대비_2/boj_빙고.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +49,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Python.boj_빙고">
+  <component name="RunManager" selected="Python.3.격차판 최대합">
     <configuration name="3.격차판 최대합" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Algorithm_additon" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -158,7 +157,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.boj_빙고" />
         <item itemvalue="Python.boj_수 이어가기" />
         <item itemvalue="Python.boj_수열" />
         <item itemvalue="Python.3.격차판 최대합" />

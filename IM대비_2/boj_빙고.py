@@ -23,6 +23,7 @@ def check():
 
     if cnt>=3: return True
     return False
+
 N=5
 bingo=[list(map(int,input().split())) for _ in range(N)]
 
@@ -40,7 +41,7 @@ for i in range(N):
 
 ans = 0
 
-while not check():
+while not check(): #check함수의 리턴값이 false 일때만 통과시키겠다
     r,c=pos[call[ans]]
     print((r,c))
     bingo[r][c] = 0
