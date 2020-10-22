@@ -20,11 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b41ae01-3bee-4881-acba-bdf26e81f7df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IM대비/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IM대비/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IM대비/practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/IM대비/practice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IM대비/자리배정.py" beforeDir="false" afterPath="$PROJECT_DIR$/IM대비/자리배정.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IM대비_2/boj_빙고.py" beforeDir="false" afterPath="$PROJECT_DIR$/IM대비_2/boj_빙고.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IM대비_2/boj_2559.수열.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boj/boj_1929.소수 구하기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boj/boj_1978.소수 찾기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boj/boj_9613.GCD합.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IM대비_2/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IM대비_2/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boj/boj_2960.에라토스테네스의 체.py" beforeDir="false" afterPath="$PROJECT_DIR$/boj/boj_2960.에라토스테네스의 체.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boj/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/boj/input.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
