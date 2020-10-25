@@ -18,6 +18,6 @@ if __name__=='__main__':
         s,b=map(int,input().split())
         ingre.append((s,b))
     #print(ingre)
-    res=987654321
+    res=10987654321
     DFS(0,1,0)
     print(res)

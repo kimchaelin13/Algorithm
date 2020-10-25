@@ -2,13 +2,63 @@ import sys
 sys.stdin=open('input.txt','r')
 from collections import deque
 
+
+'''
+#1. 입력받고, 여기서는 주의할게 w,h가 둘다 0이면 종료한다는 조건 해야함
+    언제 끝날지 모르니까 while로 처리함
+    
+#2. 1을 찾으면 ch_island(i,j) 출발함
+
+#3. 내가 만들프로그램은 1을 발견하면 그 뭉탱이가 어디까지 뻗쳐있는지 체크하는 프로그램임. 방문했으면 다 2로 만들것
+
+#4. 그리고 더이상 갈데가 없으면 다시 돌아와서 for문으로 1이 있는 곳을 탐색한다. 1을 발견하면 cnt+=1
+'''
+dx=[-1,1,0,0,-1,-1,1,1]
+dy=[0,0,-1,1,-1,1,-1,1]
+def ch_island(x,y):
+    seaMap[x][y]=2
+    Q=deque()
+    Q.append((x,y))
+
+    while Q:
+        px,py=Q.popleft()
+        for k in range(8):
+            nx=px+dx[k]
+            ny=py+dy[k]
+            if 0<=nx<H and 0<=ny<W and seaMap[nx][ny]==1:
+                seaMap[nx][ny]=2
+                Q.append((nx,ny))
+
+while True:
+    W,H=map(int,input().split())
+    if W==0 and H==0:
+        break
+    seaMap=[list(map(int,input().split())) for _ in range(H)]
+    cnt=0
+    for i in range(H):
+        for j in range(W):
+            if seaMap[i][j]==1:
+                cnt+=1
+                ch_island(i,j)
+
+    print(cnt)
+
+
+
+
+
+
+
+
+
+
 '''
 #bfs로 풀어야지 ㅁㅊ 이것도 틀림 도랏나,,,(유기농 배추랑 같이 몰랑
 
 #1.입력 똑같이 받고, dist배열 준비함
 #2.for문 조회하다가 땅이 있고,dist가 0이면, 출발
 #3.
-'''
+
 dx=[-1,1,0,0,-1,-1,1,1]
 dy=[0,0,-1,1,-1,1,-1,1]
 def bfs(x,y):
@@ -41,7 +91,7 @@ while True: #충격적..
                 cnt+=1
     print(cnt)
 
-
+'''
 
 '''
 아이스크림찾기였나? 그거랑 매 우 유 사 하다

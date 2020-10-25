@@ -3,6 +3,58 @@ from collections import deque
 sys.stdin=open('input.txt','r')
 
 '''
+1.입력을 받고
+2.1을 찾으면 count_warm(i,j) 
+3.그 프로그램은 1인걸 다 탐색하고, 이제 그 주변에 1이 없으면 cnt+=1
+    한번 온곳은 다시 방문하지 않아야 하기 때문에 방문체크하거나 수를 바꿔버림
+    Q.append(1)
+    cnt+=1
+    
+    while Q:
+        x=popleft()
+'''
+dx=[-1,1,0,0]
+dy=[0,0,-1,1]
+def cnt_warm(x,y):
+    land[x][y]=2
+    Q=deque()
+    Q.append((x,y))
+
+    while Q:
+        px,py=Q.popleft()
+        for k in range(4):
+            nx=px+dx[k]
+            ny=py+dy[k]
+            if 0<=nx<M and 0<=ny<N and land[nx][ny]==1:
+                land[nx][ny]=2
+                Q.append((nx,ny))
+
+
+for tc in range(int(input())):
+    M,N,K=map(int,input().split())
+    land=[[0]*(N) for _ in range(M)]
+    for _ in range(K):
+        a,b=map(int,input().split())
+        land[a][b]=1
+    #print(land)
+    cnt=0
+    for i in range(M):
+        for j in range(N):
+            if land[i][j]==1:
+                cnt+=1
+                cnt_warm(i,j)
+    print(cnt)
+
+
+
+
+
+
+
+
+
+
+'''
 BFS로 풀기...
 
 
@@ -11,7 +63,7 @@ BFS로 풀기...
 #3. dist배열 만들고
 #4. arr[][]에 있는 것 +1 해줌
 
-'''
+
 dx=[-1,1,0,0]
 dy=[0,0,-1,1]
 def bfs(x,y):
@@ -50,7 +102,7 @@ for tc in range(int(input())):
         print(x)
     print(cnt)
 
-
+'''
 
 
 

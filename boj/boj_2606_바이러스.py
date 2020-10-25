@@ -46,3 +46,34 @@ if __name__=='__main__':
         linked[b].append(a)
     visited=[False]*(V+1)
     print(check(1))
+
+
+
+#
+# def ch_virus(v):
+#     visited[v]=1
+#     Q=deque()
+#     Q.append(v)
+#     cnt=0
+#
+#     while Q:
+#         x=Q.popleft()
+#         for i in linked[x]:
+#             if not visited[i]:
+#                 visited[i]=True
+#                 Q.append(i)
+#                 cnt+=1
+#     return cnt
+#
+#
+# if __name__=='__main__':
+#     V,E=int(input()),int(input())
+#     visited=[False]*(V+1)
+#     linked=[[]*(V+1) for _ in range(V+1)]
+#     for _ in range(E):
+#         a,b=map(int,input().split())
+#         linked[a].append(b)
+#         linked[b].append(a)
+#     #print(linked)
+#     print(ch_virus(1))
+#
