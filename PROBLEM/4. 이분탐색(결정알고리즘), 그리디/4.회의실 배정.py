@@ -8,7 +8,7 @@ meeting=[]
 for _ in range(n):
     s,e=map(int,input().split())
     meeting.append((s,e))
-
+print(meeting)
 meeting.sort(key=lambda x:(x[1],x[0]))
 
 cnt=0
