@@ -5,19 +5,19 @@ sys.stdin=open('input.txt','r')
 #이 코드의 문제는, 3개만 뽑아서 최대를 구해야하는데 그게 안됨. 어떻게 고칠수있을까>
 
 
-def DFS(L,sum,cnt):
+def DFS(L,SUM,cnt):
     global answer
-    if sum>M:
+    if SUM>M:
         return
 
     if L==N:
         if cnt==3:
-            if sum>answer:
-                answer=sum
+            if SUM>answer:
+                answer=SUM
 
     else:
-        DFS(L+1,sum+cards[L],cnt+1)
-        DFS(L+1,sum,cnt)
+        DFS(L+1,SUM+cards[L],cnt+1)
+        DFS(L+1,SUM,cnt)
 
 
 if __name__=="__main__":
