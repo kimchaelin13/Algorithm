@@ -2,60 +2,62 @@ import sys
 sys.stdin=open('input.txt','r')
 
 '''
-6 4
-0 0 0 0 0 0
-0 0 0 0 0 0
-0 0 0 0 0 0
-0 0 0 0 0 1
 
-#1.날짜를 기록해야함=> 같은 크기의 dist배열 만들어야지
-    입력받고, 행렬 리스트 만듦
-    
-#2.1을 찾으면, Q에 넣고, 그 상태로 돌려야 함.
+def make_permutaion(L):
+    if L==m:
+        for i in range(m):
+            print(ans[i],end=" ")
+        print()
 
-    
-    사방탐색 => 만약에 arr[ni][nj]==0, 범위 안에 있으면 => dist[ni][nj]=dist[pi][pj]+1
-    그리고 방문표시(토마토 익었으면)=>익었다고 표시
-#3. 출력은 최대 dist value에서 -1
+    else:
+        for i in range(1,n+1):
+            if check[i]==0:
+                check[i]=1
+                ans[L]=i
+                make_permutaion(L+1)
+                check[i]=0
+
+
+
+if __name__ == '__main__':
+    n,m=map(int,input().split())
+    ans=[0]*m
+    check=[0]*(n+1)
+    make_permutaion(0)
 '''
 
-from collections import deque
+'''
+부분집합의 합 
+-1 3 -9 6 7 -6 1 5 4 -2
 
-di=[-1,1,0,0]
-dj=[0,0,-1,1]
+합해서 0이 되는 부분집합을 모두 출력하시오
 
-M,N=map(int,input().split())
-farm=[list(map(int,input().split())) for _ in range(N)]
-dist=[[0]*M for _ in range(N)]
-Q=deque()
+#1.0,0으로 출발해서
+    선택했다가 선택안했다가 반복 => L이 끝까지 가면
+    그때 합을 보고 0인지 아닌지, 0이면 출력
+'''
 
-for i in range(N):
-    for j in range(M):
-        if farm[i][j]==1:
-            Q.append((i,j))
+def dfs(L,total):
+    #global cnt
 
-while Q:
-    pi,pj=Q.popleft()
-    for d in range(4):
-        ni=pi+di[d]
-        nj=pj+dj[d]
-        if 0<=ni<N and 0<=nj<M and farm[ni][nj]==0:
-            farm[ni][nj]=1
-            dist[ni][nj]=dist[pi][pj]+1
-            Q.append((ni,nj))
+    if L==len(N):
+        if total==0:
+            for i in range(len(N)):
+                if res[i]==1:
+                    print(N[i],end=" ")
+            print()
 
-flag=1
-for i in range(N):
-    for j in range(M):
-        if farm[i][j]==0:
-            flag=0
-result=0
-#flag=1이라는 뜻은 안익은 토마토가 없다는뜻
-if flag==1:
-    for i in range(N):
-        for j in range(M):
-            if dist[i][j]>result:
-                result=dist[i][j]
-    print(result)
-else:
-    print(-1)
+    else:
+        res[L]=1
+        dfs(L+1,total+N[L])
+        res[L]=0
+        dfs(L+1,total)
+
+
+if __name__ == '__main__':
+    N=list(map(int,input().split()))
+    res=[0]*len(N)
+    cnt=0
+    dfs(0,0)
+    #print(cnt)
+
