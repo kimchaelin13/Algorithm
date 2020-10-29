@@ -15,33 +15,47 @@ sys.stdin=open('input.txt','r')
 #5. 그리고 그 팀이 된 cnt를 저장해서 [1,3,,]저장함
 #6. 그리고 출력은 인원수-sum(res) 로
 '''
-def cnt_team(v):
-    global cnt
-    Q=deque()
-    Q.append(v)
-    #visited[v]=True
+# def cnt_team(v):
+#     global cnt
+#     Q=deque()
+#     Q.append(v)
+#     #visited[v]=True
+#
+#     while Q:
+#         x=Q.popleft()
+#         for i in choose[x]:
+#             #i도 x를 선택해야함
+#             if not visited[i]:
+#                 cnt+=1
+#                 Q.append(i)
+#     res.append(cnt)
+#
+# for tc in range(1,int(input())+1):
+#     N=int(input())
+#     choose=[[]*(N+1) for _ in range(N+1)]
+#     visited=[False]*(N+1)
+#
+#     temp=list(map(int,input().split()))
+#     temp.insert(0,0)
+#     for i in range(1,N+1):
+#         choose[i].append(temp[i])
+#     #print(choose)
+#     res=[]
+#     cnt=0
+#     for i in range(1,N+1):
+#         cnt_team(i)
+#     print(res)
 
-    while Q:
-        x=Q.popleft()
-        for i in choose[x]:
-            #i도 x를 선택해야함
-            if not visited[i]:
-                cnt+=1
-                Q.append(i)
-    res.append(cnt)
 
-for tc in range(1,int(input())+1):
-    N=int(input())
-    choose=[[]*(N+1) for _ in range(N+1)]
-    visited=[False]*(N+1)
 
-    temp=list(map(int,input().split()))
-    temp.insert(0,0)
-    for i in range(1,N+1):
-        choose[i].append(temp[i])
-    #print(choose)
-    res=[]
-    cnt=0
-    for i in range(1,N+1):
-        cnt_team(i)
-    print(res)
+import sys
+
+
+
+
+tc=int(input())
+for tc in range(tc):
+    n=int(input())
+    students=list(map(int,input().split()))
+    students=[x-1 for x in students]
+    print(students)
