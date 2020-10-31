@@ -19,8 +19,8 @@ for i in range(1,N+1):
     #반복 종료후에 만약에 369가 아니면?
     if not is369:
         print(i,end=" ")
-    # else:
-    #     print(" ",end=" ")
+    else:
+        print(" ",end=" ")
 
 
 

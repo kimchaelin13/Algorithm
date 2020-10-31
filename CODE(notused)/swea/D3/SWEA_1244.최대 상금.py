@@ -28,6 +28,30 @@ sys.stdin=open('input.txt','r')
 
 
 
-for tc in range(1,int(input())+1):
+# for tc in range(1,int(input())+1):
 
-#
+#5c2
+arr=[3,2,8,8,8]
+N=len(arr) ; cnt=2#원하는 교환횟수
+ans=0
+visit=[set() for _ in range(11)]
+
+def backtrack(k):
+    global ans
+    num = int(''.join(map(str, arr)))
+    if num in visit[k]: return
+    else:
+        visit[k].add(num) #일종의 방문체크
+
+    if k==cnt:
+        if ans<num:
+            ans=num; #print(ans)
+
+    else:
+        for i in range(N-1):
+            for j in range(i+1,N):
+                arr[i],arr[j]=arr[j],arr[i]
+                backtrack(k+1)
+                arr[i],arr[j]=arr[j],arr[i]
+backtrack(0)
+print(ans)
