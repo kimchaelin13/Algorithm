@@ -7,34 +7,34 @@ sys.stdin=open('input.txt','r')
 2 1 0 1 (+ -  * /)
 3 5 3 7 9
 
-#1 +2개 -1개 /1개로 만들수있는 모든 순열을 다구한다
-#2.순열 한개 구하면 거기에 숫자 끼워넣어서 => 숫자 하나 만들고 res에 넣고 
+
 
 '''
-#내가 만들 프로그램은 넘버와 연산자로 계산해서 max,min을 계속 갱신하다가 답을 리턴하는것!
+#넘버와 연산자로 계산해서 max,min을 계속 갱신하다가 답을 리턴하는것!
 def make_number(L,total):
     global MAX,MIN
-    if L==len(operator)-1:
+    if L==len(nums)-1:
         if MAX<total:
             MAX=total
-        if MIN>total:
+        if MIN>=total:
             MIN=total
 
     else:
         for i in range(4):
-            if operator[i]:
+            tmp=total
+            if operator[i] !=0:
                 operator[i]-=1
                 if i==0:
-                    total += nums[i+1]
+                    total += nums[L+1]
                 elif i==1:
-                    total -= nums[i+1]
+                    total -= nums[L+1]
                 elif i==2:
-                    total *= nums[i+1]
+                    total *= nums[L+1]
                 else:
-                    total = int(total/nums[i+1])
+                    total = int(total/nums[L + 1])
                 make_number(L+1,total)
+                total=tmp
                 operator[i]+=1
-
 
 for tc in range(1,int(input())+1):
     N=int(input())

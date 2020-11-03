@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b41ae01-3bee-4881-acba-bdf26e81f7df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/IM_문제.py" afterDir="false" />
-    </list>
+    <list default="true" id="9b41ae01-3bee-4881-acba-bdf26e81f7df" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -20,6 +20,8 @@ def quick_sort(arr,start,end):
         if left>right: quick_sort(arr,start,right-1)
         if right<left: quick_sort(arr,right+1,end)
 
+
+
 for tc in range(1,int(input())+1):
     N=int(input())
     nums=list(map(int,input().split()))
