@@ -55,25 +55,25 @@ for tc in range(1,int(input())+1):
     #print(Temp)
     res=[]
     fin=0
-    bin=[]
+    total=987654321
     for i in range(0,len(Temp),N-1):
         res = Temp[i:i+(N-1)]
         #print(res)
         res.insert(0,1)
         res.append(1)
-        print(res)
+        # print(res)
 
         #3.이제 ans(합)를 갱신해준다 ㅋㅋ
         ans=0
-        total=987654321
         ansLst = []
 
         for i in range(len(res)-1):
+            if ans>= total:
+                break
             ans+=arr[res[i]-1][res[i+1]-1]
-        bin.append(ans)
-        
+
+
         #만약에 지금 구한 ans답이 전에 구한 ans(total)보다 더 작다면? total=ans
         if ans<total:
             total=ans
-            print(tc,total)
-    print('#{} {}'.format(tc,min(bin)))
+    print('#{} {}'.format(tc,total))
