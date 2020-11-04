@@ -11,7 +11,7 @@ s의 길이 만큼 돌면서
                                                             다르면 => 지금거를 위에 push한다
                                                             
 #2.마지막에 stack에 있는걸 출력한다
-'''
+
 
 
 def check(s):
@@ -34,4 +34,24 @@ for tc in range(1,int(input())+1):
     N=len(s)
     result=''.join(check(s))
     print('#{} {}'.format(tc,result))
+
+'''
+
+for tc in range(1,int(input())+1):
+    line=list(input())
+
+    for i in range(len(line)):
+        if line[i] != 'A':
+            for j in range(i+1,len(line)):
+                if line[i]==line[j]:
+                    line[i]=line[j]='A'
+                    break
+    line=sorted(line)
+    line=line[line.count('A'):]
+
+    if line:
+        print('#{} {}'.format(tc,''.join(line)))
+    else:
+        print('#{} Good'.format(tc))
+
 

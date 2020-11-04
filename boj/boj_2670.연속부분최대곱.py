@@ -6,12 +6,41 @@ sys.stdin=open('input.txt','r')
 
 1.1을 반드시 포함하면서, 만들수 있는 연속최대곱 길이는?
 
-#1. 1.1까지 왔을때, 1개
-#2. 0.7까지 왔을때, 2개(1.1*0.7) => 0.77
-#3. 1.3까지 왔을때, 1.3 1개
-#4. 0.9까지 왔을때, 1.3*0.9 => 1.17 2개
-#5. 1.4까지 왔을때, 1.4*1.17 => 3개
-#6. 0.8까지 왔을때, 
+투포인터
+
+s=0
+e=1
+
+8
+1.1
+0.7
+1.3
+0.9
+1.4
+0.8
+0.7
+1.4
+
+
 '''
 
-d
+N=int(sys.stdin.readline())
+nums=[]
+for _ in range(N):
+    nums.append(float(sys.stdin.readline()))
+s=0
+e=1
+MAX=nums[s]
+temp=nums[s]
+while True:
+    if s==N or e==N:
+        break
+    if temp*nums[e]<=MAX:
+        s=e
+        e+=1
+        temp=nums[s]
+    else:
+        MAX=temp*nums[e]
+        e+=1
+        temp=MAX
+print('%0.3f'% MAX)
