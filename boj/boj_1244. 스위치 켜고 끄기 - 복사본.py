@@ -30,7 +30,6 @@ def female(bulb,start):
         if (start - size <= 0 or start + size >= N + 1) or (bulb[start-size] != bulb[start+size]):
             break
         size+=1
-
     for i in range(start-size,start+size+1):
         if bulb[i]==1:
             bulb[i]=0
