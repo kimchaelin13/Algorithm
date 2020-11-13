@@ -6,7 +6,7 @@ sys.stdin=open('input.txt','r')
 
 '''
 def male(bulb,num):
-    for i in range(num,N,num):
+    for i in range(num,N+1,num):
         if bulb[i]==1:
             bulb[i]=0
         else:
@@ -15,12 +15,14 @@ def male(bulb,num):
 
 def female(bulb,num):
     #이 함수 인덱스
-    s=0
+    s=1
     while True:
-        if num-s==0 or num+s==N+1 or (bulb[num-s] != bulb[num+s]):
-            s-=1
+        if num-s==0 or num+s==N+1:
+            break
+        elif (bulb[num-s] != bulb[num+s]):
             break
         s+=1
+    s-=1
     for i in range(num-s,num+s+1):
         if bulb[i]==0:
             bulb[i]=1

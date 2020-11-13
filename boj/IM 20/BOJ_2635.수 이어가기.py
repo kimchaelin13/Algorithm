@@ -27,6 +27,7 @@ def f(a, b, v=False):
 
 n = int(input())
 L = [f(n, i) for i in range(n + 1)] #0~n까지 어떤 숫자를 택했을때 가장 긴지 계산해놓고, 배열을 만들때는 해당인덱스로만 답을 구한다!
+print(L)
 k = L.index(max(L))
 #print(max(L))
 f(n, k, 1) # ? : f(n,k,1)을 호출하면 왜 i값은 안돌려주지??
