@@ -11,57 +11,60 @@ sys.stdin=open('input.txt','r')
 
 '''
 def hor_ver_check(arr):
-    global bingo
+    total_hor_ver=0
 
     for i in range(10):
         if sum(arr[i][:]) == 0:
-            bingo+=1
-
+            total_hor_ver+=1
+    return total_hor_ver
 
 def dia_check(arr):
-    global bingo
-
-    res=0
+    total_dia=0
+    TEMP=0
     for i in range(5):
-        res += arr[i][i]
-    if res==0:
-        bingo +=1
+        TEMP += arr[i][i]
+    if TEMP==0:
+        total_dia +=1
 
-    res=0
+    # total_dia=0
+    TEMP=0
     for i in range(5):
-        res += arr[i][4-i]
-    if res==0:
-        bingo+=1
+        TEMP += arr[i][4-i]
+    if TEMP == 0:
+        total_dia +=1
 
+    return total_dia
 
-#사회자 부르는 call 담기
+#빙고판
+arr=[list(map(int,input().split())) for _ in range(5)]
+
+#사회자 call
 call=[]
 for _ in range(5):
     call.extend(map(int,input().split()))
-#print(call)
 
-#빙고
-arr=[list(map(int,input().split())) for _ in range(5)]
-
-temp = arr + list(zip(*arr))
-#print(temp)
-
-
-bingo=0
 ans=0
-
 s=0
+flag=0
+for i in range(s,len(call)):
+    #print(s)
+    for r in range(5):
+        for c in range(5):
+            #print(s)
+            if call[s] == arr[r][c]:
+                arr[r][c] = 0
+                temp = arr + list(zip(*arr))
 
+                hor_ver_check(temp)
+                dia_check(arr)
 
-for i in range(5):
-    for j in range(5):
-        if call[s] == arr[i][j]:
-            arr[i][j] = 0
-            hor_ver_check(zip(arr))
-            dia_check(arr)
+                if hor_ver_check(temp)+dia_check(arr)>=3:
+                    print(s+1)
+                    flag=1
+                    break
+        if flag:
+            break
+    if flag:
+       break
 
-            if bingo==3:
-                ans=arr[i][j]
-                print(ans)
-                break
-            s+=1
+    s+=1
