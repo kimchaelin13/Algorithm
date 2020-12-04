@@ -2,49 +2,82 @@
 오름차순으로 정렬하고 자르고, 최대값 찾고
             세로도 마찬가지로 최댓값 찾아서
             두개 곱함
+10 8
+3
+0 3
+1 4
+0 2
 '''
 import sys
 sys.stdin=open('input.txt','r')
 
-def hor_max(e):
-    #마지막 e를 리턴해줌(마지막 e가 제일 크니까
-    global HOR,HOR_s,HOR_e
-    temp=e-HOR_s
-    if temp>HOR:
-        HOR=temp
-    HOR_s=e
-    if e>HOR_e:
-        HOR_e=e
+def cut(cutlist,end):
+    st=0
+    length=0
+    for i in cutlist:
+        temp = i-st
+        if temp>length:
+            length=temp
+        st=i
+    return max(length, end-st)
 
-def ver_max(e):
-    global VER,VER_s,VER_e
-    temp=e-VER_s
-    if temp>VER:
-        VER=temp
-    VER_s=e
-    if e>VER_e:
-        VER_e=e
 
-N,M=map(int,input().split())
-temp=[]
+
+W,H=map(int,input().split())
+hor,ver = [],[]
 for _ in range(int(input())):
-    D,C=map(int,input().split())
-    temp.append((D,C))
-temp.sort()
-
-HOR,VER=0,0
-HOR_e,VER_e=0,0
-HOR_s,VER_s=0,0
-for i in range(len(temp)):
-    if temp[i][0]==0:
-        hor_max(temp[i][1])
+    dir,val=map(int,input().split())
+    if dir==0:
+        ver.append(val)
     else:
-        ver_max(temp[i][1])
+        hor.append(val)
 
-#3단계
-#구한 HOR값과 M-e해서 둘중에 max값인걸로 출력해야함
-RES=(max((M-HOR_e),HOR))*(max((N-VER_e),VER))
-print(RES)
+ver.sort()
+hor.sort()
+
+max_v = cut(ver,H)
+max_h = cut(hor,W)
+
+print(max_h*max_v)
+# def hor_max(e):
+#     #마지막 e를 리턴해줌(마지막 e가 제일 크니까
+#     global HOR,HOR_s,HOR_e
+#     temp=e-HOR_s
+#     if temp>HOR:
+#         HOR=temp
+#     HOR_s=e
+#     if e>HOR_e:
+#         HOR_e=e
+#
+# def ver_max(e):
+#     global VER,VER_s,VER_e
+#     temp=e-VER_s
+#     if temp>VER:
+#         VER=temp
+#     VER_s=e
+#     if e>VER_e:
+#         VER_e=e
+#
+# N,M=map(int,input().split())
+# temp=[]
+# for _ in range(int(input())):
+#     D,C=map(int,input().split())
+#     temp.append((D,C))
+# temp.sort()
+# print(temp)
+# HOR,VER=0,0
+# HOR_e,VER_e=0,0
+# HOR_s,VER_s=0,0
+# for i in range(len(temp)):
+#     if temp[i][0]==0:
+#         hor_max(temp[i][1])
+#     else:
+#         ver_max(temp[i][1])
+#
+# #3단계
+# #구한 HOR값과 M-e해서 둘중에 max값인걸로 출력해야함
+# RES=(max((M-HOR_e),HOR))*(max((N-VER_e),VER))
+# print(RES)
 
 
 '''

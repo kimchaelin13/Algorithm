@@ -8,7 +8,7 @@ side_length=[]
 for _ in range(6):
     d,l = map(int,input().split())
     side_length.append(l)
-
+#print(side_length)
 #1. find largest area / index
 pos=0
 largest_area = 0
@@ -16,10 +16,7 @@ for i in range(len(side_length)):
     if side_length[i-1]*side_length[i] > largest_area:
         largest_area = side_length[i-1] * side_length[i]
         pos = i-1
-#1-1
-# if side_length[0]*side_length[5] > largest_area:
-#     largest_area = side_length[0] * side_length[5]
-#     pos = 5
+print(pos,largest_area)
 
 #2. find small one(clock-reverse => +3: hor , +4:ver)
 h = (pos+3)%6
