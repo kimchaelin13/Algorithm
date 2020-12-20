@@ -13,7 +13,6 @@ sys.stdin=open('input.txt','r')
 1000 0
 2000 1000
 2000 2000
-'''
 
 from collections import deque
 def bfs():
@@ -40,7 +39,7 @@ for tc in range(int(input())):
         info.append((a,b))
     print(bfs())
 
-'''
+
 플로이드-와샬 이건뭘까
 
 max = 1000
@@ -82,15 +81,17 @@ for _ in range(t):
         print('happy')
     else:
         print('sad')
-
 '''
 
-'''
+
+
 # 이거 왜 안돼?
 def isPossible(pre):
     global flag
     #pre가 페스티벌 좌표이면 return
     if pre == info[-1]:
+        return
+    if abs(pre[0] - info[-1][0]) + abs(pre[1] - info[-1][1]) <=1000:
         return
 
     MIN=987654321
@@ -127,4 +128,3 @@ for tc in range(int(input())):
         print('sad')
     else:
         print('happy')
-'''
